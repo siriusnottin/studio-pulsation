@@ -38,7 +38,8 @@ export default function Home() {
 			}
 
 			// animate each h2 when it enters viewport so they replay on scroll
-			gsap.utils.toArray('.home-h2').forEach((el) => {
+			const homeH2Els = gsap.utils.toArray('.home-h2') as Element[]
+			homeH2Els.forEach((el) => {
 				const words = (el as Element).querySelectorAll('.stagger-word')
 				if (words.length) {
 					gsap.from(words, {
@@ -69,7 +70,8 @@ export default function Home() {
 			})
 
 			// animate paragraphs; trigger on the parent section for reliability
-			gsap.utils.toArray('.home-paragraph').forEach((el, i) => {
+			const paragraphEls = gsap.utils.toArray('.home-paragraph') as Element[]
+			paragraphEls.forEach((el, i) => {
 				const triggerEl = (el as Element).closest('section') || el
 				const lines = (el as Element).querySelectorAll('.stagger-line-inner')
 				if (lines.length) {
