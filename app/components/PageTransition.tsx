@@ -23,7 +23,9 @@ export default function PageTransition({ children }: { children: React.ReactNode
     // reveal: slide overlay up to uncover the page
     tl.to(el, { yPercent: -100, duration: 0.55, ease: 'power2.out', delay: 0.08 })
 
-    return () => tl.kill()
+    return () => {
+      tl.kill()
+    }
   }, [pathname])
 
   return (
