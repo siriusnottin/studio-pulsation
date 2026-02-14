@@ -11,12 +11,8 @@
   --color-foreground: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1E0000;
-    --foreground: #F9F2E3;
-  }
-}
+/* dark mode disabled — keep light theme defaults */
+
 
 body {
   background: var(--background);
