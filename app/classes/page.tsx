@@ -74,7 +74,7 @@ export default function ClassesPage() {
 						// chain: when a timeline completes, play the next
 						sectionTls.forEach((tl, idx) => {
 							tl.eventCallback('onComplete', () => {
-								if (sectionTls[idx + 1]) sectionTls[idx + 1].play()
+								if (idx + 1 < sectionTls.length) sectionTls[idx + 1].play()
 							})
 						})
 					}
